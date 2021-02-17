@@ -69,7 +69,7 @@ const server = app.listen(PORT, async () => {
       .black.bgBrightWhite
   )
 
-  const res = await axios.get("http://localhost:4005/events")
+  const res = await axios.get("http://event-bus-srv:4005/events")
 
   for (let event of res.data) {
     const { type, data } = event
